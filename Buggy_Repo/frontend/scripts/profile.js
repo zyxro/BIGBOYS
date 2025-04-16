@@ -1,53 +1,62 @@
-<<<<<<< HEAD
-const baseURL = "http://localhost:8000";
-=======
-const baseURL = "http://localhost:8000" //2024101074 - added this temprorarily
->>>>>>> e2c3594d61721fb607464c32f1b94d6b83a7266a
+const baseURL = "http://localhost:8001";
 
-async function loadItems(searchTerm = "") {
-  const res = await fetch(`${baseURL}/items`);
-  const data = await res.json();
-  const list = document.getElementById("itemList");
+function renderUsers(users) {
+  const list = document.getElementById("userList");
   list.innerHTML = "";
 
-  const filteredItems = data.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  document.getElementById("itemCount").textContent = `Total items: ${filteredItems.length}`;
-
-  filteredItems.forEach(item => {
+  users.forEach(user => {
     const li = document.createElement("li");
-    li.textContent = `${item.name}: ${item.description}`;
-    const del = document.createElement("button");
-    del.textContent = "Delete";
-    del.onclick = () => deleteItem(item._id);
-    li.appendChild(del);
+    li.textContent = `${user.username}: ${user.bio}`;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = async () => {
+      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" });
+      loadUsers();
+    };
+
+    li.appendChild(deleteBtn);
     list.appendChild(li);
   });
 }
 
-async function deleteItem(id) {
-  await fetch(`${baseURL}/items/${id}`, { method: "DELETE" });
-  loadItems(document.getElementById("search").value); 
+async function loadUsers() {
+  const res = await fetch(`${baseURL}/users`);
+  const users = await res.json();
+  renderUsers(users);
+
+  document.getElementById("userCounts").textContent = `Total users: ${users.length}`;
 }
 
-document.getElementById("search").addEventListener("input", (e) => {
-  loadItems(e.target.value); 
-});
-// Chocolate Question : Does React do Server-Side Rendering or Client-Side Rendering?
+document.getElementById("search").addEventListener("input", async (e) => {
+  const term = e.target.value.toLowerCase();
+  const res = await fetch(`${baseURL}/users`);
+  const users = await res.json();
 
-document.getElementById("itemForm").addEventListener("submit", async (e) => {
+  const filteredUsers = users.filter(user =>
+    user.username.toLowerCase().includes(term)
+  );
+
+  document.getElementById("userCounts").textContent = `Total users: ${filteredUsers.length}`;
+  renderUsers(filteredUsers);
+});
+
+document.getElementById("userForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const name = document.getElementById("name").value;
-  const description = document.getElementById("description").value;
-  await fetch(`${baseURL}/items`, {
+  const username = document.getElementById("username").value;
+  const bio = document.getElementById("bio").value;
+
+  await fetch(`${baseURL}/users`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, description })
+    body: JSON.stringify({ username, bio })
   });
+
+  document.getElementById("displayUsername").value = username;
+  document.getElementById("displayBio").value = bio;
+
   e.target.reset();
-  loadItems(document.getElementById("search").value);
+  loadUsers();
 });
 
-loadItems();
+loadUsers();
