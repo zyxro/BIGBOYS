@@ -15,7 +15,7 @@ async function loadUsers() {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = async () => {
-      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" });
+      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" }); //this is an issue-2024101074, {baseURL} is NOT defined anywhere, will cause reference error
       loadUsers();
     };
 
