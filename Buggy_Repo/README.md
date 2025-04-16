@@ -50,10 +50,10 @@
 | 11  |In db.py changed item to items                                                                   |  Manan Trivedi      |   Manan Trivedi |
 | 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi       |    Manan Trivedi |
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
-| 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     |    Abhiraj Ratna          |
-| 15  |                                          |               |              |
-| 16  |                                          |               |              |
-| 17  |                                          |               |              |
+| 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     |    Abhiraj Ratna   |
+| 15  |In profile fixed the path for profile.js                                          |     Ishaan Shiv Kumar          |   Ishaan Shiv Kumar           |
+| 16  |Fixed viewport error in items.html                                          |   Ishaan Shiv Kumar            |    Ishaan Shiv Kumar          |
+| 17  |Fixed viewport error in index.html                                           |      Ishaan Shiv Kumar           |    Ishaan Shiv Kumar          |
 | 18  |                                          |               |              |
 | 19  |                                          |               |              |
 | 20  |                                          |               |              |
