@@ -51,33 +51,16 @@
 | 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi       |    Manan Trivedi |
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     | Abhiraj Ratna |
-<<<<<<< HEAD
-| 15  |Tried fixing the syntax in home.js                                          |               |              |
-<<<<<<< HEAD
-| 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     |    Abhiraj Ratna   |
-| 15  |In profile fixed the path for profile.js                                          |     Ishaan Shiv Kumar          |   Ishaan Shiv Kumar           |
-| 16  |Fixed viewport error in items.html                                          |   Ishaan Shiv Kumar            |    Ishaan Shiv Kumar          |
-| 17  |Fixed viewport error in index.html                                           |      Ishaan Shiv Kumar           |    Ishaan Shiv Kumar          |
-| 18  |news.html: added <noscript> tag                                          | Vaishnavi            |   Vaishnavi           |
-=======
-| 16  |In quiz.py changed from get to post in line 51                                          |  Abhiraj Ratna             |  Abhiraj Ratna            |
-| 17  |In news.html added <noscript> tag                                          |       Vaishnavi        |   Vaishnavi           |
-| 18  |                                          |               |              |
->>>>>>> 0f43ba4b9d518625cd27d5b2f8a1245aa621071a
-| 19  |                                          |               |              |
-| 20  |                                          |               |              |
-=======
 | 15  |Tried fixing the syntax in home.js                                          |   Manan Trivedi            |      Manan Trivedi        |
 | 16  |In quiz.py changed from get to post in line 51                                          |  Abhiraj Ratna             |  Abhiraj Ratna            |
 | 17  |In news.html added <noscript> tag                                          |       Vaishnavi        |   Vaishnavi           |
 | 18  |In main.py added CORS to main, handling items CRUD operation                                          |    Ayush SM           |     Ayush SM         |
 | 19  |In items.js changed app routes from items to items/                                          |      Ayush SM         |     Ayush SM         |
 | 20  |in profile.js fixed Inconsistent Element IDs                                          |      Vaishnavi         |    Vaishnavi          |
->>>>>>> 67cd7396731c60eea9ad4c8cc5e57290fb97b505
-| 21  |                                          |               |              |
-| 22  |                                          |               |              |
-| 23  |                                          |               |              |
-| 24  |                                          |               |              |
+| 21  |In users.py changed from post to get in line 11                                           |  Abhiraj Ratna             |     Abhiraj Ratna         |
+| 22  |Fixed viewport error in profile.html                                          |  Ishaan Shiv Kumar             |   Ishaan Shiv Kumar           |
+| 23  |In profile.html fixed path of profile.js                                          |   Ishaan Shiv Kumar            |   Ishaan Shiv Kumar           |
+| 24  |Fixed viewport error in items.js                                          |  Ishaan Shiv Kumar             |    Ishaan Shiv Kumar        |
 | 25  |                                          |               |              |
 | 26  |                                          |               |              |
 | 27  |                                          |               |              |
