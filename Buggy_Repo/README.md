@@ -48,8 +48,8 @@
 | 9   | created home.js                                                                                 |  Manan Trivedi      |   Manan Trivedi  |
 | 10  |Enchanced the styles.css file                                                                    |  Manan Trivedi      |   Manan Trivedi  |
 | 11  |In db.py changed item to items                                                                   |  Manan Trivedi      |   Manan Trivedi |
-| 12  |In main.py Changed from "/home" to "/", Added missing router                                          |               |              |
-| 13  |                                          |               |              |
+| 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi    |    Manan          |
+| 13  |items.html I have added the missing container                                                    |Manan Trivedi|Manan Trivedi     |
 | 14  |                                          |               |              |
 | 15  |                                          |               |              |
 | 16  |                                          |               |              |
