@@ -6,6 +6,11 @@
   <meta name="description" content="Analytics dashboard displaying key metrics." />
   <title>Analytics</title>
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    #plot {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -27,7 +32,7 @@
       <p>Max Item Name Length: <span id="maxItemName">0</span></p>
       <p>Max Username Length: <span id="maxUserName">0</span></p>
     </div>
-    <img id="plot" src="./placeholder.png" alt="Graph showing analytics data" style="max-width: 100%;" />
+    <img id="plot" src="./placeholder.png" alt="Graph showing analytics data" />
   </div>
 
   <script src="./scripts/analytics.js"></script>
