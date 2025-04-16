@@ -1,5 +1,5 @@
 ### Fixing the Buggy Code
-
+https://github.com/zyxro/BIGBOYS
 - This code has 30 issues out of which 1 is no code in style.css . 
 - The total marks for the entire codebase is 40, some issues have more marks than the other one. Style.css is of 5 marks. It will get scaled down to 20. All team members will get equal marks.
 - You are suppose to work in teams of 4 or 5
@@ -62,8 +62,8 @@
 | 23  |In profile.html fixed path of profile.js                                                         |   Ishaan Shiv Kumar  |   Ishaan Shiv Kumar |
 | 24  |Fixed viewport error in items.js                                                                 |  Ishaan Shiv Kumar |    Ishaan Shiv Kumar  |
 | 25  |Changed styles/profile.js to scripts/profile.js                                                      | Manan   | Manan      |
-| 26  |                                          |               |              |
-| 27  |                                          |               |              |
-| 28  |                                          |               |              |
-| 29  |                                          |               |              |
+| 26  |fastAPI router not needed                                                             | Manan              |Manan              |
+| 27  |models.py Item should inherit from BaseModel                                          |Ayush           |Ayush              |
+| 28  |db.py fixed MONGO_URI to MONGO_URL                                          |   Manan            |Manan              |
+| 29  | remove baseURL half the time                                         |   Manan            |   Manan   |
 | 30  |                                          |               |              |
