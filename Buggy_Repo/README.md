@@ -50,19 +50,13 @@
 | 11  |In db.py changed item to items                                                                   |  Manan Trivedi      |   Manan Trivedi |
 | 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi       |    Manan Trivedi |
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
-<<<<<<< HEAD
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     | Abhiraj Ratna |
 | 15  |Tried fixing the syntax in home.js                                          |               |              |
-| 16  |                                          |               |              |
-| 17  |                                          |               |              |
-| 18  |                                          |               |              |
-=======
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     |    Abhiraj Ratna   |
 | 15  |In profile fixed the path for profile.js                                          |     Ishaan Shiv Kumar          |   Ishaan Shiv Kumar           |
 | 16  |Fixed viewport error in items.html                                          |   Ishaan Shiv Kumar            |    Ishaan Shiv Kumar          |
 | 17  |Fixed viewport error in index.html                                           |      Ishaan Shiv Kumar           |    Ishaan Shiv Kumar          |
 | 18  |news.html: added <noscript> tag                                          | Vaishnavi            |   Vaishnavi           |
->>>>>>> d81f76994a9b7560ee13d0a61d75bc91b410a56b
 | 19  |                                          |               |              |
 | 20  |                                          |               |              |
 | 21  |                                          |               |              |
