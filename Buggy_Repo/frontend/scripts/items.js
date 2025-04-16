@@ -1,7 +1,7 @@
 const baseURL = "http://localhost:8000";
 
 async function loadItems(searchTerm = "") {
-  const res = await fetch(`${baseURL}/items`);
+  const res = await fetch(`${baseURL}/items/`);
   const data = await res.json();
   const list = document.getElementById("itemList");
   list.innerHTML = "";
@@ -37,7 +37,8 @@ document.getElementById("itemForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const description = document.getElementById("description").value;
-  await fetch(`${baseURL}/items`, {
+  await fetch(`${baseURL}/items/`, {
+    //2024101074-bug spotted loadItems.js, not letting me do anything has to be items/ not items 
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, description })
