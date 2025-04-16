@@ -46,9 +46,9 @@
 | 7   | profile.js changed element ID mismatch, userCount to userCounts                                 |  Ayush SM           |   Ayush SM       |
 | 8   | items.py deleted a duplicate code segment                                                       |  Ayush SM           |   Ayush SM       |
 | 9   | created home.js                                                                                 |  Manan Trivedi      |   Manan Trivedi  |
-| 10  |                                          |               |              |
-| 11  |                                          |               |              |
-| 12  |                                          |               |              |
+| 10  |Enchanced the styles.css file                                                                    |  Manan Trivedi      |   Manan Trivedi  |
+| 11  |In db.py changed item to items                                                                   |  Manan Trivedi      |   Manan Trivedi |
+| 12  |In main.py Changed from "/home" to "/", Added missing router                                          |               |              |
 | 13  |                                          |               |              |
 | 14  |                                          |               |              |
 | 15  |                                          |               |              |
