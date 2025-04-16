@@ -20,30 +20,44 @@ function updateScoreDisplay() {
 }
 
 function updateAttempts() {
-  const search = searchInput.value.toLowerCase();
+  const search = searchInput ? searchInput.value.toLowerCase() : "";
   const filtered = attemptHistory.filter(a =>
     a.question.toLowerCase().includes(search)
   );
 
-  attemptList.innerHTML = filtered.map(a => `
-    <div>
-      <strong>${a.question}</strong><br/>
-      Your answer: ${a.answer} — ${a.result}
-    </div>
-  `).join("");
+  if (attemptList) {
+    attemptList.innerHTML = filtered.map(a => `
+      <div>
+        <strong>${a.question}</strong><br/>
+        Your answer: ${a.answer} — ${a.result}
+      </div>
+    `).join("");
+  }
 
-  attemptCount.textContent = `Total attempts: ${filtered.length}`;
+  if (attemptCount) {
+    attemptCount.textContent = `Total attempts: ${filtered.length}`;
+  }
 }
 
-searchInput.addEventListener("input", updateAttempts);
-// how is life ?
+if (searchInput) {
+  searchInput.addEventListener("input", updateAttempts);
+}
+
 async function loadHighScore() {
   try {
     const res = await fetch(`${BASE_URL}/quiz/highscore`);
+    if (!res.ok) {
+      throw new Error(`Server returned ${res.status}: ${res.statusText}`);
+    }
     const data = await res.json();
-    highScore = data.high_score;
-    updateScoreDisplay();
-  } catch {
+    if (data && typeof data.high_score === 'number') {
+      highScore = data.high_score;
+      updateScoreDisplay();
+    } else {
+      throw new Error("Invalid high score data format");
+    }
+  } catch (error) {
+    console.error("Failed to load high score:", error);
     feedback.textContent = "Failed to load high score.";
   }
 }
@@ -53,9 +67,16 @@ async function loadQuestion() {
 
   try {
     const res = await fetch(`${BASE_URL}/quiz/question`);
+    if (!res.ok) {
+      throw new Error(`Server returned ${res.status}: ${res.statusText}`);
+    }
     const data = await res.json();
-    currentQuestion = data;
 
+    if (!data || !data.text || !Array.isArray(data.options) || !data.id) {
+      throw new Error("Invalid question format received");
+    }
+
+    currentQuestion = data;
     questionDiv.textContent = data.text;
 
     form.innerHTML = data.options.map(option => `
@@ -67,7 +88,8 @@ async function loadQuestion() {
 
     form.dataset.id = data.id;
     feedback.textContent = "";
-  } catch {
+  } catch (error) {
+    console.error("Failed to load question:", error);
     feedback.textContent = "Failed to load question.";
   }
 }
@@ -81,6 +103,10 @@ form.addEventListener("submit", async (e) => {
 
   const answer = selected.value;
   const id = parseInt(form.dataset.id);
+  if (isNaN(id)) {
+    feedback.textContent = "Invalid question ID.";
+    return;
+  }
 
   try {
     const res = await fetch(`${BASE_URL}/quiz/answer`, {
@@ -88,6 +114,10 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, answer, score })
     });
+
+    if (!res.ok) {
+      throw new Error(`Server returned ${res.status}: ${res.statusText}`);
+    }
 
     const data = await res.json();
 
@@ -106,7 +136,9 @@ form.addEventListener("submit", async (e) => {
 
     if (data.is_correct) {
       score = data.score;
-      highScore = data.high_score;
+      if (data.high_score > highScore) {
+        highScore = data.high_score;
+      }
       updateScoreDisplay();
       feedback.textContent = "✅ Correct!";
       await loadQuestion();
@@ -116,20 +148,23 @@ form.addEventListener("submit", async (e) => {
       form.innerHTML = "";
       resetBtn.classList.remove("hidden");
     }
-  } catch {
+  } catch (error) {
+    console.error("Error submitting answer:", error);
     feedback.textContent = "Error submitting answer.";
   }
 });
 
-resetBtn.addEventListener("click", () => {
-  score = 0;
-  gameOver = false;
-  attemptHistory = [];
-  updateScoreDisplay();
-  updateAttempts();
-  resetBtn.classList.add("hidden");
-  loadQuestion();
-});
+if (resetBtn) {
+  resetBtn.addEventListener("click", () => {
+    score = 0;
+    gameOver = false;
+    attemptHistory = [];
+    updateScoreDisplay();
+    updateAttempts();
+    resetBtn.classList.add("hidden");
+    loadQuestion();
+  });
+}
 
 window.addEventListener("DOMContentLoaded", async () => {
   await loadHighScore();
