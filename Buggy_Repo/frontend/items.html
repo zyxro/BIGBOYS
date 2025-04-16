@@ -1,31 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Items</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="items.html">Items</a>
-    <a href="profile.html">Profile</a>
-    <a href="analytics.html">Analytics</a>
-    <a href="news.html">News</a>
-  </nav>
-  <!-- Added missing container div -->
-  <div class="container">
-    <h1>📦 Items</h1>
-    <p id="itemCount">Total items: 0</p>
-    <input type="text" id="search" placeholder="Search items..." />
-    <form id="itemForm">
-      <input type="text" id="name" placeholder="Item Name" required />
-      <input type="text" id="description" placeholder="Description" required />
-      <button type="submit">Add Item</button>
-    </form>
-    <ul id="itemList"></ul>
-  </div>
+const baseURL = "http://localhost:8001" //2024101074 - added this temprorarily
 
-  <script src="scripts/items.js"></script>
-</body>
-</html>
+// Reusable function to render a list of users
+function renderUsers(users) {
+  const list = document.getElementById("userList");
+  list.innerHTML = "";
+
+  users.forEach(user => {
+    const li = document.createElement("li");
+    li.textContent = `${user.username}: ${user.bio}`;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = async () => {
+      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" }); //this is an issue-2024101074, {baseURL} is NOT defined anywhere, will cause reference error
+      loadUsers();
+    };
+
+    li.appendChild(deleteBtn);
+    list.appendChild(li);
+  });
+}
+
+async function loadUsers() {
+  const res = await fetch(`${baseURL}/users`);
+  const users = await res.json();
+  renderUsers(users);
+
+  document.getElementById("userCount").textContent = `Total users: ${users.length}`;//Theres a spelling mistake here-2024101074, userCounts should be the element ID not userCount
+}
+
+document.getElementById("search").addEventListener("input", async (e) => {
+  const term = e.target.value.toLowerCase();
+  const res = await fetch(`${baseURL}/users`);
+  const users = await res.json();
+
+  const filteredUsers = users.filter(user =>
+    user.username.toLowerCase().includes(term)
+  );
+
+  document.getElementById("userCount").textContent = `Total users: ${filteredUsers.length}`;
+  renderUsers(filteredUsers);
+});
+
+document.getElementById("userForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const username = document.getElementById("username").value;
+  const bio = document.getElementById("bio").value;
+  await fetch(`${baseURL}/users`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, bio })
+  });
+  e.target.reset();
+  loadUsers();
+});
+
+loadUsers();

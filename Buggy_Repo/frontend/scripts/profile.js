@@ -1,66 +1,49 @@
-const baseURL = "http://localhost:8001" //2024101074 - added this temprorarily
+const baseURL = "http://localhost:8000";
 
-async function loadUsers() {
-  const res = await fetch(`${baseURL}/users`);
-  const users = await res.json();
-  const list = document.getElementById("userList");
+async function loadItems(searchTerm = "") {
+  const res = await fetch(`${baseURL}/items`);
+  const data = await res.json();
+  const list = document.getElementById("itemList");
   list.innerHTML = "";
-  
-  document.getElementById("userCounts").textContent = `Total users: ${users.length}`;//Theres a spelling mistake here-2024101074, userCounts should be the element ID not userCount
-  // why did I give such a weird task
-  users.forEach(user => {
+
+  const filteredItems = data.filter(item =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  document.getElementById("itemCount").textContent = `Total items: ${filteredItems.length}`;
+
+  filteredItems.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${user.username}: ${user.bio}`;
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = async () => {
-      await fetch(`${baseURL}/users/${user._id}`, { method: "DELETE" }); //this is an issue-2024101074, {baseURL} is NOT defined anywhere, will cause reference error
-      loadUsers();
-    };
-
-    li.appendChild(deleteBtn);
+    li.textContent = `${item.name}: ${item.description}`;
+    const del = document.createElement("button");
+    del.textContent = "Delete";
+    del.onclick = () => deleteItem(item._id);
+    li.appendChild(del);
     list.appendChild(li);
   });
 }
 
-document.getElementById("search").addEventListener("input", async (e) => {
-  const term = e.target.value.toLowerCase();
-  const res = await fetch(`${baseURL}/users`);
-  const users = await res.json();
-  const list = document.getElementById("userList");
-  list.innerHTML = "";
+async function deleteItem(id) {
+  await fetch(`${baseURL}/items/${id}`, { method: "DELETE" });
+  loadItems(document.getElementById("search").value); 
+}
 
-  const filteredUsers = users.filter(user => user.username.toLowerCase().includes(term));
-  document.getElementById("userCount").textContent = `Total users: ${filteredUsers.length}`;
-
-  filteredUsers.forEach(user => {
-    const li = document.createElement("li");
-    li.textContent = `${user.username}: ${user.bio}`;
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.onclick = async () => {
-      await fetch(`/users/${user._id}`, { method: "DELETE" }); //should be DELETE not PATCH-2024101074
-      loadUsers();
-    };
-
-    li.appendChild(deleteBtn);
-    list.appendChild(li);
-  });
+document.getElementById("search").addEventListener("input", (e) => {
+  loadItems(e.target.value); 
 });
+// Chocolate Question : Does React do Server-Side Rendering or Client-Side Rendering?
 
-loadUsers();
-
-document.getElementById("userForm").addEventListener("submit", async (e) => {
+document.getElementById("itemForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  const username = document.getElementById("username").value;
-  const bio = document.getElementById("bio").value;
-  await fetch(`${baseURL}/users`, {
+  const name = document.getElementById("name").value;
+  const description = document.getElementById("description").value;
+  await fetch(`${baseURL}/items`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, bio })
+    body: JSON.stringify({ name, description })
   });
   e.target.reset();
-  loadUsers();
+  loadItems(document.getElementById("search").value);
 });
+
+loadItems();
