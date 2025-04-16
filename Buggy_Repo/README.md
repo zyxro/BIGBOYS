@@ -26,21 +26,26 @@
 
 ### Add the names of the members and roll numbers of your team below
 
-- Name : Roll Number
+- Abhiraj Ratna : 2024114011
+- Ishaan Shiv Kumar: 2024101098
+- Manan Trivedi: 2024101048
+- Ayush SM: 2024101074
+- Vaishnavi : 2024115003
+
 
 ### Table to keep track
 
-| ID  | Issue Description                        | Identified By | Fixed By     |
-|-----|------------------------------------------|---------------|--------------|
-| 1   | Style.css is not filled                                    |         Narain |     Whole Team     |
-| 2   |                                          |               |              |
-| 3   |                                          |               |              |
-| 4   |                                          |               |              |
-| 5   |                                          |               |              |
-| 6   |                                          |               |              |
-| 7   |                                          |               |              |
-| 8   |                                          |               |              |
-| 9   |                                          |               |              |
+| ID  | Issue Description                                                                               | Identified By       | Fixed By         |
+|-----|-------------------------------------------------------------------------------------------------|---------------------|------------------|
+| 1   | Style.css is not filled                                                                         |         Narain      |     Whole Team   |
+| 2   | Fixed analytics.py("names"/username to "name"/"username")                                       |    Manan Trivedi    |    Manan Trivedi |
+| 3   | removed html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  and added <link rel="icon" href="favicon.ico" type="image/x-icon"                                                                                |   Vaishnavi         |     Vaishnavi    |
+| 4   | There was a missing viewport error in quiz.html                                                 |Ishaan Shiv Kumar    |Ishaan Shiv Kumar |
+| 5   | In Models.py datatype changed from int to str                                                   |   Manan             |     Manan        |
+| 6   | index.html fixed charset to UTF-8                                                               |   Vaishnavi         |   Vaishnavi      |
+| 7   | profile.js changed element ID mismatch, userCount to userCounts                                 |  Ayush SM           |   Ayush SM       |
+| 8   | items.py deleted a duplicate code segment                                                       |  Ayush SM           |   Ayush SM       |
+| 9   | created home.js                                                                                 |  Manan Trivedi      |   Manan Trivedi  |
 | 10  |                                          |               |              |
 | 11  |                                          |               |              |
 | 12  |                                          |               |              |
