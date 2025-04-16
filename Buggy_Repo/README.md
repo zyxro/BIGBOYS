@@ -57,10 +57,10 @@
 | 18  |In main.py added CORS to main, handling items CRUD operation                                          |    Ayush SM           |     Ayush SM         |
 | 19  |In items.js changed app routes from items to items/                                          |      Ayush SM         |     Ayush SM         |
 | 20  |in profile.js fixed Inconsistent Element IDs                                          |      Vaishnavi         |    Vaishnavi          |
-| 21  |                                          |               |              |
-| 22  |                                          |               |              |
-| 23  |                                          |               |              |
-| 24  |                                          |               |              |
+| 21  |In users.py changed from post to get in line 11                                           |  Abhiraj Ratna             |     Abhiraj Ratna         |
+| 22  |Fixed viewport error in profile.html                                          |  Ishaan Shiv Kumar             |   Ishaan Shiv Kumar           |
+| 23  |In profile.html fixed path of profile.js                                          |   Ishaan Shiv Kumar            |   Ishaan Shiv Kumar           |
+| 24  |Fixed viewport error in items.js                                          |  Ishaan Shiv Kumar             |    Ishaan Shiv Kumar        |
 | 25  |                                          |               |              |
 | 26  |                                          |               |              |
 | 27  |                                          |               |              |
