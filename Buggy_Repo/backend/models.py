@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class Item():
-    name: int
+    name: str #CHANGED FROM int to str
     description: str
 
 class User(BaseModel):
