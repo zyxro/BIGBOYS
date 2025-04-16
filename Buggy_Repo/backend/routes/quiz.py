@@ -48,7 +48,7 @@ async def get_question():
         "options": question["options"]
     }
 
-@router.post("/answer")  # Changed from GET to POST
+@router.get("/answer")  # Changed from GET to POST
 async def submit_answer(data: dict = Body(...)):  # Added Body to properly parse JSON
     question_id = data.get("id")
     answer = data.get("answer")
