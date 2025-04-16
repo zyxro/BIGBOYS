@@ -52,11 +52,17 @@
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     | Abhiraj Ratna |
 | 15  |Tried fixing the syntax in home.js                                          |               |              |
+<<<<<<< HEAD
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     |    Abhiraj Ratna   |
 | 15  |In profile fixed the path for profile.js                                          |     Ishaan Shiv Kumar          |   Ishaan Shiv Kumar           |
 | 16  |Fixed viewport error in items.html                                          |   Ishaan Shiv Kumar            |    Ishaan Shiv Kumar          |
 | 17  |Fixed viewport error in index.html                                           |      Ishaan Shiv Kumar           |    Ishaan Shiv Kumar          |
 | 18  |news.html: added <noscript> tag                                          | Vaishnavi            |   Vaishnavi           |
+=======
+| 16  |In quiz.py changed from get to post in line 51                                          |  Abhiraj Ratna             |  Abhiraj Ratna            |
+| 17  |In news.html added <noscript> tag                                          |       Vaishnavi        |   Vaishnavi           |
+| 18  |                                          |               |              |
+>>>>>>> 0f43ba4b9d518625cd27d5b2f8a1245aa621071a
 | 19  |                                          |               |              |
 | 20  |                                          |               |              |
 | 21  |                                          |               |              |
