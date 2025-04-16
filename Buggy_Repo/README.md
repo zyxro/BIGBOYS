@@ -51,7 +51,7 @@
 | 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi       |    Manan Trivedi |
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     | Abhiraj Ratna |
-| 15  |Tried fixing the syntax in home.js                                          |   Manan Trivedi            |      Manan Trivedi        |
+| 15  |Tried fixing the syntax in home.js                                          |   Abhiraj Ratna           |      Abhiraj Ratna       |
 | 16  |In quiz.py changed from get to post in line 51                                          |  Abhiraj Ratna             |  Abhiraj Ratna            |
 | 17  |In news.html added <noscript> tag                                          |       Vaishnavi        |   Vaishnavi           |
 | 18  |In main.py added CORS to main, handling items CRUD operation                                          |    Ayush SM           |     Ayush SM         |
