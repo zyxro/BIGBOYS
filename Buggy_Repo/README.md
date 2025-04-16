@@ -26,7 +26,12 @@
 
 ### Add the names of the members and roll numbers of your team below
 
-- Name : Roll Number
+- Name : 	Roll Number
+Manan	 	2024101048
+Ishaan	 	2024101098
+Abhiraj	 	2024114011
+Ayush	 	2024101074
+Vaishnavi	2024115003
 
 ### Table to keep track
 

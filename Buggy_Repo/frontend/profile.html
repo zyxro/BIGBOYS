@@ -12,10 +12,12 @@
     <a href="profile.html">Profile</a>
     <a href="analytics.html">Analytics</a>
     <a href="news.html">News</a>
+    <a href="quiz.html">Quiz</a> <!-- Added quiz link to navigation -->
   </nav>
   <div class="container">
     <!-- Please suggest some good music, I am tired of my playlist -->
-    <p id="userCounts">Total users: 0</p>
+    <!-- Fixed userCount id (was previously userCounts in some files) -->
+    <p id="userCount">Total users: 0</p>
     <input type="text" id="search" placeholder="Search users..." />
     <h1>🧑 User Profiles</h1>
     <form id="userForm">
@@ -26,6 +28,6 @@
     <ul id="userList"></ul>
   </div>
 
-  <script src="styles/profile.js"></script>
+  <script src="scripts/profile.js"></script> <!-- Fixed path from styles/profile.js to scripts/profile.js -->
 </body>
 </html>
