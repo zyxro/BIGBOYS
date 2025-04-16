@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class Item():
+class Item(BaseModel): #2024101074-Basemodel not specified
     name: str #CHANGED FROM int to str
     description: str
 
