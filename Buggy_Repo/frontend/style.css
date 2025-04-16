@@ -27,6 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+/* Header styling */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+}
+
 p {
     line-height: 1.6;
     color: var(--text-color);

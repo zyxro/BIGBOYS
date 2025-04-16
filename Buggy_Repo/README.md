@@ -42,7 +42,7 @@
 | 3   | removed html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  and added <link rel="icon" href="favicon.ico" type="image/x-icon"                                                                                |   Vaishnavi         |     Vaishnavi    |
 | 4   | There was a missing viewport error in quiz.html                                                 |Ishaan Shiv Kumar    |Ishaan Shiv Kumar |
 | 5   | In Models.py datatype changed from int to str                                                   |   Manan             |     Manan        |
-| 6   | index.html fixed charset to UTF-8                                                               |   Vaishnavi         |   Vaishnavi      |
+| 6   | index.html fixed charset to UTF-8                        |   Vaishnavi         |   Vaishnavi      |
 | 7   | profile.js changed element ID mismatch, userCount to userCounts                                 |  Ayush SM           |   Ayush SM       |
 | 8   | items.py deleted a duplicate code segment                                                       |  Ayush SM           |   Ayush SM       |
 | 9   | created home.js                                                                                 |  Manan Trivedi      |   Manan Trivedi  |
@@ -51,17 +51,17 @@
 | 12  |In main.py Changed from "/home" to "/", Added missing router, Fixed missing prefix,Added imports | Manan Trivedi       |    Manan Trivedi |
 | 13  |items.html I have added the missing container                                                    |Manan Trivedi       |Manan Trivedi     |
 | 14  |In users.py Fixed from delete_all to delete_one with specific ID                                 |   Abhiraj Ratna     | Abhiraj Ratna |
-| 15  |Tried fixing the syntax in home.js                                          |   Abhiraj Ratna           |      Abhiraj Ratna       |
-| 16  |In quiz.py changed from get to post in line 51                                          |  Abhiraj Ratna             |  Abhiraj Ratna            |
-| 17  |In news.html added <noscript> tag                                          |       Vaishnavi        |   Vaishnavi           |
-| 18  |In main.py added CORS to main, handling items CRUD operation                                          |    Ayush SM           |     Ayush SM         |
-| 19  |In items.js changed app routes from items to items/                                          |      Ayush SM         |     Ayush SM         |
-| 20  |in profile.js fixed Inconsistent Element IDs                                          |      Vaishnavi         |    Vaishnavi          |
-| 21  |In users.py changed from post to get in line 11                                           |  Abhiraj Ratna             |     Abhiraj Ratna         |
-| 22  |Fixed viewport error in profile.html                                          |  Ishaan Shiv Kumar             |   Ishaan Shiv Kumar           |
-| 23  |In profile.html fixed path of profile.js                                          |   Ishaan Shiv Kumar            |   Ishaan Shiv Kumar           |
-| 24  |Fixed viewport error in items.js                                          |  Ishaan Shiv Kumar             |    Ishaan Shiv Kumar        |
-| 25  |Changed from http to https in news.js                                          | Abhiraj Ratna              |    Abhiraj Ratna          |
+| 15  |Tried fixing the syntax in home.js                                                               |   Manan Trivedi |Manan Trivedi        |
+| 16  |In quiz.py changed from get to post in line 51                                                   |  Abhiraj Ratna |  Abhiraj Ratna            |
+| 17  |In news.html added <noscript> tag                                                                | Vaishnavi |   Vaishnavi |
+| 18  |In main.py added CORS to main, handling items CRUD operation                                          | Ayush SM |     Ayush SM         |
+| 19  |In items.js changed app routes from items to items/                                              |  Ayush SM   |Ayush SM |
+| 20  |in profile.js fixed Inconsistent Element IDs                                                     |  Vaishnavi |    Vaishnavi          |
+| 21  |In users.py changed from post to get in line 11                                                  |  Abhiraj Ratna|  Abhiraj Ratna   |
+| 22  |randomized the error                                                                             |  Ishaan Shiv Kumar  |   Ishaan Shiv Kumar   |
+| 23  |In profile.html fixed path of profile.js                                                         |   Ishaan Shiv Kumar  |   Ishaan Shiv Kumar |
+| 24  |Fixed viewport error in items.js                                                                 |  Ishaan Shiv Kumar |    Ishaan Shiv Kumar  |
+| 25  |Changed styles/profile.js to scripts/profile.js                                                      | Manan   | Manan      |
 | 26  |                                          |               |              |
 | 27  |                                          |               |              |
 | 28  |                                          |               |              |
