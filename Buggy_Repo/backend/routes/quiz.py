@@ -39,6 +39,7 @@ questions = [
 
 game_state = {"high_score": 0}
 # god would hate me for not dockerizing this repo
+# 2024101074 says - blasphemy
 @router.get("/question")
 async def get_question():
     question = questions[1]

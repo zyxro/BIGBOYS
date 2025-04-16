@@ -25,8 +25,9 @@ async def get_analytics():
     items = []
     async for item in items_collection.find():
         items.append(item)
-    # damm this is the last lab
-    users = []  # Fixed from hardcoded list to empty list
+    # damm this is the last lab 
+    # 2024101074 says: i will miss u too bro
+    users = [] #2024101074- fixed users to be an empty list why were there elements inside already
     async for user in users_collection.find():
         users.append(user)
     
