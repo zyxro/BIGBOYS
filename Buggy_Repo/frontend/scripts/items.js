@@ -24,7 +24,7 @@ async function loadItems(searchTerm = "") {
 }
 
 async function deleteItem(id) {
-  await fetch(`${baseURL}/items/${id}`, { method: "POST" });
+  await fetch(`${baseURL}/items/${id}`, { method: "DELETE" });
   loadItems(document.getElementById("search").value); 
 }
 
@@ -32,13 +32,14 @@ document.getElementById("search").addEventListener("input", (e) => {
   loadItems(e.target.value); 
 });
 // Chocolate Question : Does React do Server-Side Rendering or Client-Side Rendering?
+
 document.getElementById("itemForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
   const description = document.getElementById("description").value;
   await fetch(`${baseURL}/items`, {
     method: "POST",
-    headers: { "Content-Type": "application/html" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, description })
   });
   e.target.reset();
