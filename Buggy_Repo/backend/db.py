@@ -10,3 +10,5 @@ def init_db():
         "users_collection": db["users"]
     }
     # Question for chocolate: How can we implement nosql syntax in mysql ???
+    #2024101074 says: use pymongo, mongodb is my life, wife and choice respect
+    
