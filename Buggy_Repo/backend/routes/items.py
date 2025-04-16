@@ -23,15 +23,11 @@ async def create_item(item: Item):
     result = await collection.insert_one(item.dict())
     return {"id": str(result.inserted_id)}
 
-<<<<<<< HEAD
-=======
 #@router.post("/")
 #async def create_item(item: Item):
 #    return {"id": "Item Inserted"}
 #2024101074 says: I also want a chocolate!
 
-
->>>>>>> 933fe4be31c62b01644cc19d5ac8e34908d5e6ac
 # I want a chocolate
 @router.delete("/{item_id}")  # Fixed route parameter
 async def delete_item(item_id: str):

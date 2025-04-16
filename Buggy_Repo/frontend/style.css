@@ -1,88 +1,7 @@
 <<<<<<< HEAD
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-nav a:hover {
-  background-color: #555;
-  border-radius: 3px;
-}
-
-input, select, button {
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.news-item, .attempt-scrollable {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-}
-
-.news-scrollable, .attempt-scrollable {
-  max-height: 400px;
-  overflow-y: auto;
-}
 =======
+
+>>>>>>> 66d53e755155a46b6dbb601db4ecdea5d2abbbb8
 html, body{
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #ffffff, #9c8383);
@@ -93,6 +12,9 @@ html, body{
 }
 /* 
  * css basic done by 2024101074, usernotfound-101
+<<<<<<< HEAD
  */
  
->>>>>>> 933fe4be31c62b01644cc19d5ac8e34908d5e6ac
+=======
+ */
+>>>>>>> 66d53e755155a46b6dbb601db4ecdea5d2abbbb8
