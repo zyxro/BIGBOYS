@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const baseURL = "http://localhost:8000";
+=======
+const baseURL = "http://localhost:8000" //2024101074 - added this temprorarily
+>>>>>>> e2c3594d61721fb607464c32f1b94d6b83a7266a
 
 async function loadItems(searchTerm = "") {
   const res = await fetch(`${baseURL}/items`);

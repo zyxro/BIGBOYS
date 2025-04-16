@@ -1,4 +1,35 @@
+<<<<<<< HEAD
 const baseURL = "http://localhost:8001" //2024101074 - added this temprorarily
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!--fixed missing -->
+  <title>Items</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="items.html">Items</a>
+    <a href="profile.html">Profile</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="news.html">News</a>
+  </nav>
+  <!-- Added missing container div -->
+  <div class="container">
+    <h1>📦 Items</h1>
+    <p id="itemCount">Total items: 0</p>
+    <input type="text" id="search" placeholder="Search items..." />
+    <form id="itemForm">
+      <input type="text" id="name" placeholder="Item Name" required />
+      <input type="text" id="description" placeholder="Description" required />
+      <button type="submit">Add Item</button>
+    </form>
+    <ul id="itemList"></ul>
+  </div>
+>>>>>>> e2c3594d61721fb607464c32f1b94d6b83a7266a
 
 // Reusable function to render a list of users
 function renderUsers(users) {
