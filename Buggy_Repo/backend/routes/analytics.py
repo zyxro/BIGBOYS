@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import io
 import base64
 
-router = APIRouter()
+router = APIRouter(prefix="/analytics")  # Added prefix
 
 async def get_items_collection():
     from db import init_db
@@ -26,15 +26,15 @@ async def get_analytics():
     async for item in items_collection.find():
         items.append(item)
     # damm this is the last lab
-    users = ["A1","B2","C3"]
+    users = []  # Fixed from hardcoded list to empty list
     async for user in users_collection.find():
         users.append(user)
     
     item_count = len(items)
     user_count = len(users)
     
-    item_name_lengths = np.array([len(item["names"]) for item in items]) if items else np.array([])
-    user_username_lengths = np.array([len(user["usernames"]) for user in users]) if users else np.array([])
+    item_name_lengths = np.array([len(item["name"]) for item in items]) if items else np.array([])  # Fixed "names" to "name"
+    user_username_lengths = np.array([len(user["username"]) for user in users]) if users else np.array([])  # Fixed "usernames" to "username"
     
     stats = {
         "item_count": item_count,
@@ -66,5 +66,6 @@ async def get_analytics():
     plt.close()
     
     return JSONResponse({
-        "stats": stats
+        "stats": stats,
+        "plot": f"data:image/png;base64,{image_base64}"  # Added missing plot in response
     })
