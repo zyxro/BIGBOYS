@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:8001" //2024101074 - added this temprorarily
+const baseURL = "http://localhost:8000" //2024101074 - added this temprorarily
 
 async function loadUsers() {
   const res = await fetch(`${baseURL}/users`);
