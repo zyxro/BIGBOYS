@@ -54,7 +54,7 @@
 | 15  |In profile fixed the path for profile.js                                          |     Ishaan Shiv Kumar          |   Ishaan Shiv Kumar           |
 | 16  |Fixed viewport error in items.html                                          |   Ishaan Shiv Kumar            |    Ishaan Shiv Kumar          |
 | 17  |Fixed viewport error in index.html                                           |      Ishaan Shiv Kumar           |    Ishaan Shiv Kumar          |
-| 18  |                                          |               |              |
+| 18  |news.html: added <noscript> tag                                          | Vaishnavi            |   Vaishnavi           |
 | 19  |                                          |               |              |
 | 20  |                                          |               |              |
 | 21  |                                          |               |              |
