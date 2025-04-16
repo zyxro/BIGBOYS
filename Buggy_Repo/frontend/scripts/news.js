@@ -1,6 +1,6 @@
 const rssConverter = "https://api.rss2json.com/v1/api.json?rss_url=";
 const feeds = [
-  { name: "bbc", url: "https://feeds.bbci.co.uk/news/world/rss.xml" }, //Added s to http 
+  { name: "bbc", url: "https://feeds.bbci.co.uk/news/world/rss.xml" }, // Added 's' to http
   { name: "guardian", url: "https://www.theguardian.com/international/rss" }
 ];
 let allArticles = [];
@@ -97,6 +97,18 @@ async function loadNews(searchTerm = "", source = "all", reset = false) {
     loading.style.display = "none";
   }
 }
+
+// Add event listener for search input
+document.getElementById("search").addEventListener("input", (e) => {
+  const searchTerm = e.target.value;
+  loadNews(searchTerm); // Pass the search term to the loadNews function
+});
+
+// Add event listener for source selection
+document.getElementById("source").addEventListener("change", (e) => {
+  const source = e.target.value;
+  loadNews("", source, true); // Pass the selected source to the loadNews function
+});
 
 // Initial call to load news when page loads
 loadNews();
