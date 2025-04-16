@@ -61,7 +61,7 @@
 | 22  |Fixed viewport error in profile.html                                          |  Ishaan Shiv Kumar             |   Ishaan Shiv Kumar           |
 | 23  |In profile.html fixed path of profile.js                                          |   Ishaan Shiv Kumar            |   Ishaan Shiv Kumar           |
 | 24  |Fixed viewport error in items.js                                          |  Ishaan Shiv Kumar             |    Ishaan Shiv Kumar        |
-| 25  |                                          |               |              |
+| 25  |Changed from http to https in news.js                                          | Abhiraj Ratna              |    Abhiraj Ratna          |
 | 26  |                                          |               |              |
 | 27  |                                          |               |              |
 | 28  |                                          |               |              |
