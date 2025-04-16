@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from models import Item
 from bson import ObjectId
+from bson.errors import InvalidId
 
 router = APIRouter()  # Fixed from dict to APIRouter
 
@@ -31,6 +32,10 @@ async def create_item(item: Item):
 # I want a chocolate
 @router.delete("/{item_id}")  # Fixed route parameter
 async def delete_item(item_id: str):
+    try:
+        item_id = ObjectId(item_id)  # Validate ObjectId
+    except InvalidId:
+        raise HTTPException(status_code=400, detail="Invalid item ID")
     collection = await get_items_collection()
     result = await collection.delete_one({"_id": ObjectId(item_id)})
     if result.deleted_count:
